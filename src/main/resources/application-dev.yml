@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3307/testdb
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: root
+    password: ENC(Nh1Ye4qGl7bp+B8/C6ggbg==) #Jasypt로 암호화한 형태
+  jpa:
+    database-platform: org.hibernate.dialect.MariaDB103Dialect
+    show-sql: true
+    properties:
+      hibernate:
+        format-sql: true
+    hibernate:
+      ddl-auto: create-drop
